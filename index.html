@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rahman Abdul — Full Stack Developer</title>
+  <meta name="description" content="Rahman Abdul — Full Stack Developer, AI Enthusiast & Smart India Hackathon 2025 Team Leader. Building scalable web applications and cloud-native systems.">
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ░░ PRELOADER ░░ -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="pre-logo">RAHMAN ABDUL</div>
+      <div class="pre-bar"><div class="pre-fill" id="preFill"></div></div>
+      <span class="pre-text">Loading Portfolio...</span>
+    </div>
+  </div>
+
+  <!-- ░░ CUSTOM CURSOR ░░ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ░░ SCROLL PROGRESS ░░ -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ░░ PARTICLE CANVAS ░░ -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- ░░░░░░░░░░░░░░░░ NAVBAR ░░░░░░░░░░░░░░░░ -->
+  <nav id="navbar">
+    <a href="#home" class="nav-logo">
+      <span class="lb">&lt;</span>PORTFOLIO<span class="lb">/&gt;</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home"          class="nav-link">Home</a></li>
+      <li><a href="#about"         class="nav-link">About</a></li>
+      <li><a href="#skills"        class="nav-link">Skills</a></li>
+      <li><a href="#projects"      class="nav-link">Projects</a></li>
+      <li><a href="#education"     class="nav-link">Education</a></li>
+      <li><a href="#certifications"class="nav-link">Certs</a></li>
+      <li><a href="#contact"       class="nav-link nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ░░░░░░░░░░░░░░░░ HERO ░░░░░░░░░░░░░░░░ -->
+  <section id="home" class="hero">
+    <div class="hero-inner">
+
+      <!-- TEXT SIDE -->
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="badge-pulse"></span>
+          Open to Internships &amp; Opportunities
+        </div>
+        <h1 class="hero-title">
+          Hi, I'm <br>
+          <span class="hero-name" id="heroName">Rahman Abdul</span>
+        </h1>
+        <h2 class="hero-role">
+          <span id="typingText"></span><span class="type-cursor">|</span>
+        </h2>
+        <p class="hero-desc">
+          Full Stack Developer building scalable web applications,
+          AI-powered solutions, and cloud-native systems that create real-world impact.
+        </p>
+        <div class="hero-actions">
+          <a href="assets/resume.pdf" download class="btn btn-gold">
+            <i class="fa-solid fa-download"></i> Download Resume
+          </a>
+          <a href="assets/resume.pdf" target="_blank" class="btn btn-outline">
+            <i class="fa-solid fa-eye"></i> View Resume
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/AbuRahmannn" target="_blank" class="social-btn" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/rahmanabd/" target="_blank" class="social-btn" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:ima.rahman06@gmail.com" class="social-btn" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- VISUAL SIDE -->
+      <div class="hero-visual">
+        <div class="profile-shell">
+          <div class="orbit-ring">
+            <div class="orbit-item" style="--delay:0s">
+              <i class="fab fa-react"></i>
+            </div>
+            <div class="orbit-item" style="--delay:-5s">
+              <i class="fab fa-java"></i>
+            </div>
+            <div class="orbit-item" style="--delay:-10s">
+              <i class="fab fa-python"></i>
+            </div>
+            <div class="orbit-item" style="--delay:-15s">
+              <i class="fab fa-node-js"></i>
+            </div>
+          </div>
+          <div class="profile-glow"></div>
+          <div class="profile-frame">
+            <img src="assets/profile.jpg" alt="Rahman Abdul" class="profile-img">
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /hero-inner -->
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░░░░░░░░░░░ STATS STRIP ░░░░░░░░░░░░░░░░ -->
+  <div class="stats-strip">
+    <div class="stat-item">
+      <span class="stat-num" data-target="2">0</span><sup>+</sup>
+      <p>Years Coding</p>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="10">0</span><sup>+</sup>
+      <p>Projects Built</p>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="3">0</span><sup>+</sup>
+      <p>Certifications</p>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="4">0</span><sup>+</sup>
+      <p>Languages Spoken</p>
+    </div>
+  </div>
+
+  <!-- ░░░░░░░░░░░░░░░░ ABOUT ░░░░░░░░░░░░░░░░ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="sec-label reveal">About Me</div>
+      <h2 class="sec-title reveal">The Developer <span class="gold-text">Behind the Code</span></h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm a <strong>B.Tech Information Technology</strong> student at Andhra Loyola Institute
+            of Engineering and Technology (ALIET), Vijayawada — passionate about crafting digital
+            experiences that are fast, beautiful, and purposeful.
+          </p>
+          <p>
+            With expertise in <strong>React, Java, Spring Boot, Django, Node.js, MySQL</strong> and
+            <strong>MongoDB</strong>, I build full-stack solutions that scale. I led Team AgriSetu
+            at <strong>Smart India Hackathon 2025</strong> — bridging AI and agriculture for real impact.
+          </p>
+          <p>
+            I thrive at the intersection of creativity and logic, where great software is born.
+          </p>
+          <div class="about-tags">
+            <span>Problem Solver</span>
+            <span>Team Leader</span>
+            <span>Fast Learner</span>
+            <span>Detail-Oriented</span>
+          </div>
+        </div>
+        <div class="about-card reveal">
+          <div class="about-info-item">
+            <div class="aii-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div>
+              <strong>B.Tech Information Technology</strong>
+              <span>ALIET, Vijayawada — CGPA: 76.5%</span>
+            </div>
+          </div>
+          <div class="about-info-item">
+            <div class="aii-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <strong>Location</strong>
+              <span>Vijayawada, Andhra Pradesh, India</span>
+            </div>
+          </div>
+          <div class="about-info-item">
+            <div class="aii-icon"><i class="fa-solid fa-code"></i></div>
+            <div>
+              <strong>Focus</strong>
+              <span>Full Stack &amp; AI-Powered Solutions</span>
+            </div>
+          </div>
+          <div class="about-info-item">
+            <div class="aii-icon"><i class="fa-solid fa-trophy"></i></div>
+            <div>
+              <strong>Achievement</strong>
+              <span>SIH 2025 Team Leader — AgriSetu</span>
+            </div>
+          </div>
+          <div class="about-info-item">
+            <div class="aii-icon"><i class="fa-solid fa-language"></i></div>
+            <div>
+              <strong>Languages</strong>
+              <span>English, Hindi, Telugu, Urdu</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░░░░░░░░░░░ SKILLS ░░░░░░░░░░░░░░░░ -->
+  <section id="skills" class="section section-dark">
+    <div class="container">
+      <div class="sec-label reveal">Expertise</div>
+      <h2 class="sec-title reveal">Technical <span class="gold-text">Skills</span></h2>
+      <div class="skills-wrapper">
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">
+            <span class="sg-icon"><i class="fa-solid fa-laptop-code"></i></span>
+            Frontend
+          </h3>
+          <div class="skill-bars">
+            <div class="sbar" data-level="90">
+              <div class="sbar-info"><span>HTML / CSS</span><span>90%</span></div>
+              <div class="sbar-track"><div class="sbar-fill"></div></div>
+            </div>
+            <div class="sbar" data-level="80">
+              <div class="sbar-info"><span>JavaScript</span><span>80%</span></div>
+              <div class="sbar-track"><div class="sbar-fill"></div></div>
+            </div>
+            <div class="sbar" data-level="75">
+              <div class="sbar-info"><span>React</span><span>75%</span></div>
+              <div class="sbar-track"><div class="sbar-fill"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">
+            <span class="sg-icon"><i class="fa-solid fa-server"></i></span>
+            Backend
+          </h3>
+          <div class="skill-bars">
+            <div class="sbar" data-level="80">
+              <div class="sbar-info"><span>Java</span><span>80%</span></div>
+              <div class="sbar-track"><div class="sbar-fill"></div></div>
+            </div>
+            <div class="sbar" data-level="70">
+              <div class="sbar-info"><span>Spring Boot</span><span>70%</span></div>
+              <div class="sbar-track"><div class="sbar-fill"></div></div>
+            </div>
+            <div class="sbar" data-level="75">
+              <div class="sbar-info"><span>Python / Django</span><span>75%</span></div>
+              <div class="sbar-track"><div class="sbar-fill"></div></div>
+            </div>
+            <div class="sbar" data-level="68">
+              <div class="sbar-info"><span>Node.js</span><span>68%</span></div>
+              <div class="sbar-track"><div class="sbar-fill"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">
+            <span class="sg-icon"><i class="fa-solid fa-database"></i></span>
+            Database &amp; Tools
+          </h3>
+          <div class="skill-bars">
+            <div class="sbar" data-level="78">
+              <div class="sbar-info"><span>MySQL</span><span>78%</span></div>
+              <div class="sbar-track"><div class="sbar-fill"></div></div>
+            </div>
+            <div class="sbar" data-level="72">
+              <div class="sbar-info"><span>MongoDB</span><span>72%</span></div>
+              <div class="sbar-track"><div class="sbar-fill"></div></div>
+            </div>
+            <div class="sbar" data-level="85">
+              <div class="sbar-info"><span>Git / GitHub</span><span>85%</span></div>
+              <div class="sbar-track"><div class="sbar-fill"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /skills-wrapper -->
+    </div>
+  </section>
+
+  <!-- ░░░░░░░░░░░░░░░░ PROJECTS ░░░░░░░░░░░░░░░░ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="sec-label reveal">Work</div>
+      <h2 class="sec-title reveal">Featured <span class="gold-text">Projects</span></h2>
+      <div class="projects-grid">
+
+        <article class="project-card reveal">
+          <div class="pc-top">
+            <span class="pc-num">01</span>
+            <a href="https://github.com/AbuRahmannn" target="_blank" class="pc-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <div class="pc-badge">Smart India Hackathon 2025</div>
+          <h3>AgriSetu</h3>
+          <p>
+            Predictive crop advisory platform using AI, ResNet &amp; XGBoost for precision agriculture.
+            Scalable microservices on AWS/GCP delivering real-time market and soil intelligence
+            to marginal farmers across India.
+          </p>
+          <div class="pc-tech">
+            <span>Python</span><span>Django</span><span>ResNet</span>
+            <span>XGBoost</span><span>AWS</span><span>GCP</span>
+            <span>MySQL</span><span>REST API</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="pc-top">
+            <span class="pc-num">02</span>
+            <a href="https://github.com/AbuRahmannn" target="_blank" class="pc-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <div class="pc-badge">Real-Time Monitoring</div>
+          <h3>AQI Tester</h3>
+          <p>
+            Air Quality Index dashboard with live API integration, historical trend analysis,
+            and user-friendly data visualizations. Modular codebase managed with Git/GitHub
+            for maintainability and scalability.
+          </p>
+          <div class="pc-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            <span>Python</span><span>Django</span><span>MySQL</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░░░░░░░░░░░ EDUCATION ░░░░░░░░░░░░░░░░ -->
+  <section id="education" class="section section-dark">
+    <div class="container">
+      <div class="sec-label reveal">Background</div>
+      <h2 class="sec-title reveal">Education <span class="gold-text">Timeline</span></h2>
+      <div class="timeline">
+
+        <div class="tl-item reveal">
+          <div class="tl-left">
+            <div class="tl-dot gold-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-body">
+            <div class="tl-meta">
+              <span class="tl-year">Sep 2023 – Present</span>
+              <span class="tl-tag current-tag">Current</span>
+            </div>
+            <h3>Bachelor of Technology — Information Technology</h3>
+            <p class="tl-school">Andhra Loyola Institute of Engineering and Technology (ALIET)</p>
+            <p class="tl-loc"><i class="fa-solid fa-location-dot"></i> Vijayawada, Andhra Pradesh</p>
+            <div class="tl-score">CGPA: 76.5%</div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-left">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-body">
+            <div class="tl-meta">
+              <span class="tl-year">Jun 2020 – Apr 2022</span>
+            </div>
+            <h3>Intermediate (MPC)</h3>
+            <p class="tl-school">Sri Chaitanya Jr College</p>
+            <p class="tl-loc"><i class="fa-solid fa-location-dot"></i> Vijayawada, Andhra Pradesh</p>
+            <div class="tl-score">CGPA: 64%</div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-left">
+            <div class="tl-dot"></div>
+          </div>
+          <div class="tl-body">
+            <div class="tl-meta">
+              <span class="tl-year">Jun 2009 – Mar 2020</span>
+            </div>
+            <h3>Secondary School Certificate (SSC)</h3>
+            <p class="tl-school">St. John's E.M High School</p>
+            <p class="tl-loc"><i class="fa-solid fa-location-dot"></i> Vijayawada, Andhra Pradesh</p>
+            <div class="tl-score">CGPA: 100% 🏆</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░░░░░░░░░░░ CERTIFICATIONS ░░░░░░░░░░░░░░░░ -->
+  <section id="certifications" class="section">
+    <div class="container">
+      <div class="sec-label reveal">Credentials</div>
+      <h2 class="sec-title reveal"><span class="gold-text">Certifications</span></h2>
+      <div class="certs-grid">
+
+        <div class="cert-card reveal">
+          <div class="cert-icon-wrap"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="cert-body">
+            <h3>Deloitte Data Analytics</h3>
+            <p>Forage Job Simulation — January 2026</p>
+            <div class="cert-tags">
+              <span>Data Analysis</span><span>Forensic Technology</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-icon-wrap"><i class="fa-solid fa-cloud"></i></div>
+          <div class="cert-body">
+            <h3>OCI AI Foundations Associate</h3>
+            <p>Oracle Cloud Infrastructure — 2025</p>
+            <div class="cert-tags">
+              <span>AI Services</span><span>Model Deployment</span><span>OCI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-icon-wrap"><i class="fab fa-java"></i></div>
+          <div class="cert-body">
+            <h3>Oracle Java Foundations</h3>
+            <p>Oracle — Core Java Programming</p>
+            <div class="cert-tags">
+              <span>OOP</span><span>Collections</span><span>Java Dev</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░░░░░░░░░░░ CONTACT ░░░░░░░░░░░░░░░░ -->
+  <section id="contact" class="section section-dark">
+    <div class="container">
+      <div class="sec-label reveal">Get In Touch</div>
+      <h2 class="sec-title reveal">Let's <span class="gold-text">Connect</span></h2>
+      <div class="contact-wrapper">
+
+        <p class="contact-intro reveal">
+          I'm actively looking for internship and full-time opportunities.
+          Whether you have a question, a project, or just want to say hi —
+          my inbox is always open.
+        </p>
+
+        <div class="contact-items reveal">
+          <a href="mailto:ima.rahman06@gmail.com" class="contact-item">
+            <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="ci-text">
+              <strong>Email</strong>
+              <span>ima.rahman06@gmail.com</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square ci-arrow"></i>
+          </a>
+          <a href="tel:+918520944645" class="contact-item">
+            <div class="ci-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="ci-text">
+              <strong>Phone</strong>
+              <span>+91 8520944645</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square ci-arrow"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/rahmanabd/" target="_blank" class="contact-item">
+            <div class="ci-icon"><i class="fab fa-linkedin-in"></i></div>
+            <div class="ci-text">
+              <strong>LinkedIn</strong>
+              <span>linkedin.com/in/rahmanabd</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square ci-arrow"></i>
+          </a>
+          <a href="https://github.com/AbuRahmannn" target="_blank" class="contact-item">
+            <div class="ci-icon"><i class="fab fa-github"></i></div>
+            <div class="ci-text">
+              <strong>GitHub</strong>
+              <span>github.com/AbuRahmannn</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square ci-arrow"></i>
+          </a>
+        </div>
+
+        <div class="contact-btns reveal">
+          <a href="assets/resume.pdf" download class="btn btn-gold">
+            <i class="fa-solid fa-download"></i> Download Resume
+          </a>
+          <a href="assets/resume.pdf" target="_blank" class="btn btn-outline">
+            <i class="fa-solid fa-eye"></i> View Resume
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░░░░░░░░░░░ FOOTER ░░░░░░░░░░░░░░░░ -->
+  <footer>
+    <div class="footer-inner">
+      <a href="#home" class="footer-logo">
+        <span class="lb">&lt;</span>RAHMAN ABDUL<span class="lb">/&gt;</span>
+      </a>
+      <p id="footerCopy"></p>
+      <nav class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
