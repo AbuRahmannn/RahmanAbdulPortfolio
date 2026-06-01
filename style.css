@@ -1094,3 +1094,46 @@ footer p {
   .stats-strip { padding:28px 6%; }
   .cert-card { flex-direction:column; }
 }
+.project-actions{
+    display:flex;
+    gap:12px;
+    margin-top:24px;
+    flex-wrap:wrap;
+}
+
+.project-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 18px;
+    border-radius:12px;
+    font-size:0.85rem;
+    font-weight:600;
+    transition:all .3s ease;
+}
+
+.github-btn{
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    color:var(--text);
+}
+
+.github-btn:hover{
+    transform:translateY(-3px);
+    border-color:var(--gold);
+    color:var(--gold);
+}
+
+.demo-btn{
+    background:linear-gradient(
+        135deg,
+        var(--gold),
+        var(--gold-light)
+    );
+    color:#000;
+}
+
+.demo-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(219,168,78,.35);
+}
