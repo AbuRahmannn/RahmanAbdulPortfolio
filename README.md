@@ -7,7 +7,7 @@ A modern, responsive, and premium developer portfolio showcasing my skills, proj
 🔗 Add your deployed portfolio link here
 
 ```text
-https://your-portfolio-link.com
+https://your-portfolio-link.com](https://rahmanabdulportfolio.netlify.app/
 ```
 
 ---
